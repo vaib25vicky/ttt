@@ -9,7 +9,7 @@
    "customizations": {
     "codespaces": {
       "repositories": {
-        "vaib25vicky/notes": {
+        "hby77-two/solid-waffle": {
           "permissions": {
             "contents": "write"
           }
